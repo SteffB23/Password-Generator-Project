@@ -88,7 +88,15 @@ header {
   cursor: pointer;
 }
 
-button[disabled] {
+.btn-2 {
+  border: none;
+  background-color: black;
+  color: #e7e9eb;
+  cursor: pointer;
+}
+
+
+button[:disabled] {
   cursor: default;
   background: #c0c7cf;
 }
