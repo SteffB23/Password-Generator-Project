@@ -31,11 +31,5 @@ THEN the password is either displayed in an alert or written to the page
 The following image shows the web application's appearance and functionality:
 
 
-![The Password Generator application displays a red button to "Generate Password".](./Assets/03-javascript-homework-demo.png)
-
-
-## Review
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
+https://steffb23.github.io/Password-Generator-Project/index
+https://github.com/SteffB23/Password-Generator-Project
