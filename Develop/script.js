@@ -47,7 +47,7 @@ if (!(num || abcLower || abcUpper || sym)) {
     sym = confirm("Would you like to use special characters?");
 if (!(num || abcLower || abcUpper || sym));
     alert("Refresh and try again!");
-
+//Make a function that gathers all these questions into one and boom
   }
   // this is a minimum count for numbers, lowerCases, upperCases & specialCharacters
   var minimumCount = 0;
@@ -64,3 +64,7 @@ var passwordText = document.getElementById('password');
 document.getElementById('generate').addEventListener('click', () => {
 passwordText.value = generatePassword(num, abcUpper, abcLower, sym, passwordText);
 });
+
+//Add variable for pw
+//Use answers to questions to generate password
+//Do a RETURN of that variable for the password
