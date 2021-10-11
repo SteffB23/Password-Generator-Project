@@ -65,6 +65,7 @@ var generatePassword = () => {
   for (let i = 0; i <= passwordLength; i++) {
     let randomIndex = Math.floor(Math.random() * characters.length);
     password += characters[randomIndex];
+    return "tempPassword1234!"
   }
   generatePassword.value = password;
 };
