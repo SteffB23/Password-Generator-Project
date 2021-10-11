@@ -1,6 +1,6 @@
 // Variables
-var generateBtn = document.querySelector("#generate");
-var passwordText = document.querySelector('#password')
+var generateBtn = document.querySelector("generate");
+var passwordText = document.querySelector('password')
 var abcUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var abcLower = "abcdefghijklmnopqrstuvwxyz";
 var num = "0123456789";
@@ -14,15 +14,15 @@ console.log("page loaded");
 
 // Prompts that display after clicking generate password:
 function generatePassword() {
-  var questions = prompt("Please enter the number of characters you want for you new password.  It must be more than 8 but less than 128.");
+  prompt("Please enter the number of characters you want for you new password.  It must be more than 8 but less than 128.");
   console.log("prompt loaded");
-  var num = confirm("Do you want numbers in your password?");
+  confirm("Do you want numbers in your password?");
   console.log("# confirmed");
-  var abcLower = confirm("Do you want lowercases in your password?");
+  confirm("Do you want lowercases in your password?");
   console.log("abc lower confirmed");
-  var abcUpper = confirm("Do you want uppercases in your password?");
+  confirm("Do you want uppercases in your password?");
   console.log("abc upper confirmed");
-  var sym = confirm("Do you want special characters in your password?");
+  confirm("Do you want special characters in your password?");
   console.log("sym confirmed");  
 //If the user does not select at least one character  
 if (!(num || abcLower || abcUpper || sym)) {
