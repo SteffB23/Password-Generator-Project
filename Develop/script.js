@@ -1,69 +1,76 @@
 // Variables
 var generateBtn = document.querySelector("#generate");
+var passwordText = document.querySelector('#password')
 var abcUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var abcUpperArr = abcUpper.split("");
 var abcLower = "abcdefghijklmnopqrstuvwxyz";
-var abcLowerArr = abcLower.split("");
 var num = "0123456789";
-var numArr = num.split("");
 var sym = "!#$%&\()*+,-./:;<=>?@^[\\]^_`{|}~";
-var symArr = sym.split("");
 
-
-//Combined Var abcUpper, abcLower & sym:
-var abcUpperLowerSym = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "abcdefghijklmnopqrstuvwxyz" + "!#$%&\()*+,-./:;<=>?@^[\\]^_`{|}~";  
+  
 
 //Immediate message when page loads:
 window.onload = alert("Welcome! Please click 'Generate password' to start!");
+console.log("page loaded");
 
+// Prompts that display after clicking generate password:
+function generatePassword() {
+  var questions = prompt("Please enter the number of characters you want for you new password.  It must be more than 8 but less than 128.");
+  console.log("prompt loaded");
+  var num = confirm("Do you want numbers in your password?");
+  console.log("# confirmed");
+  var abcLower = confirm("Do you want lowercases in your password?");
+  console.log("abc lower confirmed");
+  var abcUpper = confirm("Do you want uppercases in your password?");
+  console.log("abc upper confirmed");
+  var sym = confirm("Do you want special characters in your password?");
+  console.log("sym confirmed");  
+//If the user does not select at least one character  
+if (!(num || abcLower || abcUpper || sym)) {
+    alert("You must select at least one character type!");
+    console.log("error in");
+    num = confirm("Would you like to use numbers?");
+    abcLower = confirm("Would you like to use lowercase letters?");
+    abcUpper = confirm("Would you like to use uppercase letters?");
+    sym = confirm("Would you like to use special characters?");
 
-
+} else if (!(num || abcLower || abcUpper || sym)) {
+    alert("Refresh and try again!");
+//Make a function that gathers all these questions into one and boom
+  }
+ 
+}
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  generatePassword.value = password;
 }
 
-
-// Prompts that display after clicking generate password:
-function generatePassword() {
-  var passwordLength = prompt("Please enter the number of characters you want for you new password.  It must be more than 8 but less than 128.");
-
-  var num = confirm("Do you want numbers in your password?");
-
-  var abcLower = confirm("Do you want lowercases in your password?");
-
-  var abcUpper = confirm("Do you want uppercases in your password?");
-
-  var sym = confirm("Do you want special characters in your password?");
-//If the user does not select at least one character  
-if (!(num || abcLower || abcUpper || sym)) {
-    alert("You must select at least one character type!");
-    num = confirm("Would you like to use numbers?");
-    abcLower = confirm("Would you like to use lowercase letters?");
-    abcUpper = confirm("Would you like to use uppercase letters?");
-    sym = confirm("Would you like to use special characters?");
-if (!(num || abcLower || abcUpper || sym));
-    alert("Refresh and try again!");
-//Make a function that gathers all these questions into one and boom
-  }
-  // this is a minimum count for numbers, lowerCases, upperCases & specialCharacters
-  var minimumCount = 0;
-  var minimumNum = "";
-  var minimumAbcUpper = "";
-  var minimumAbcLower = "";
-  var minimumSym = "";  
-}
 //Added event listener to generate button
 var generateBtn = document.querySelector('button');
 generateBtn.addEventListener('click' , generatePassword);
+
+
+
 //Generate functions:
 var passwordText = document.getElementById('password');
 document.getElementById('generate').addEventListener('click', () => {
-passwordText.value = generatePassword(num, abcUpper, abcLower, sym, passwordText);
+passwordText.value = generatePassword(num + abcUpper + abcLower + sym);
 });
+
+var generatePassword = () => {
+  var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!#$%&\()*+,-./:;<=>?@^[\\]^_`{|}~"
+  var passwordLength = ""
+  for (let i = 0; i <= passwordLength; i++) {
+    let randomIndex = Math.floor(Math.random() * characters.length);
+    password += characters[randomIndex];
+  }
+  generatePassword.value = password;
+};
+
+
+
 
 //Add variable for pw
 //Use answers to questions to generate password
