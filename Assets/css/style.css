@@ -1,4 +1,4 @@
-*,
+*,  
 *::before,
 *::after {
   box-sizing: border-box;
@@ -96,7 +96,7 @@ header {
 }
 
 
-button[:disabled] {
+button[disabled] {
   cursor: default;
   background: #c0c7cf;
 }
