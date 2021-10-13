@@ -1,15 +1,14 @@
-# Password-Generator-Project
+# Random Password Generator
+![Preview of PROJECT](assets\images\Preview.gif)
+#### Random Password Generator, 10/13/2021
+#### By Stephan Brookens
 
-## User Story
-
+## Description
+The app shown is to give an example of a complete and functioning password generator to use for any website.
 ```
 AS AN employee with access to sensitive data
 I WANT to randomly generate a password that meets certain criteria
 SO THAT I can create a strong password that provides greater security
-```
-
-## Acceptance Criteria
-
 ```
 GIVEN I need a new, secure password
 WHEN I click the button to generate a password
@@ -27,9 +26,21 @@ THEN a password is generated that matches the selected criteria
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 
-```
-The following image shows the web application's appearance and functionality:
-
-
+## Setup/Installation Requirements
+* Clone this repository.
+* Open HTML in Live Server.
+* Open this repository in your terminal.
+## Known Bugs
+No bugs known.
+## Support and contact details
+Please email us for further questions at Sbrookens@hotmail.com
+## Technologies Used
+HTML
+CSS
+JavaScript
+## Contribution Guidlines 
+Direct link to site:
 https://steffb23.github.io/Password-Generator-Project/index
 https://github.com/SteffB23/Password-Generator-Project
+Copyright(c) 2021 by Stephan Brookens
+This software is licensed under MIT license.
