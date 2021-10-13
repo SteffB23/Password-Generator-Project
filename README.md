@@ -40,7 +40,7 @@ CSS
 JavaScript
 ## Contribution Guidlines 
 Direct link to site:
-https://steffb23.github.io/Password-Generator-Project/index
+https://steffb23.github.io/Password-Generator-Project/
 https://github.com/SteffB23/Password-Generator-Project
 Copyright(c) 2021 by Stephan Brookens
 This software is licensed under MIT license.
